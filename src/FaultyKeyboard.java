@@ -4,7 +4,7 @@ public class FaultyKeyboard {
 
     private static boolean checkAns(String name ,String typed){
 
-        if(name.length()<typed.length()) {
+        if(name.length()>typed.length())  return false;
             int i = 0;
             int j = 0;
 
@@ -24,9 +24,9 @@ public class FaultyKeyboard {
                     return false;
                 j++;
             }
-            return true;
-        }
-        return false;
+            return i >= name.length();
+
+
     }
 
     public static void main(String[] args) {
